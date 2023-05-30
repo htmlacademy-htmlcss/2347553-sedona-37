@@ -6,7 +6,9 @@
   </head>
   <body>
     <header class="page-header">
-      <img class="logo" src="images/logo.svg" width="140" height="70" alt="Логотип города Седона">
+      <a class="logo-link" href="#">
+        <img class="logo" src="images/logo.svg" width="140" height="70" alt="Логотип города Седона">
+      </a>
       <nav class="navigation">
         <ul class="navigation-list">
           <li class="navigation-item">
@@ -48,9 +50,6 @@
             <a class="breadcrumbs-link">Гостиницы</a>
           </li>
         </ul>
-      </header>
-
-      <section class="catalog-hotels-filter">
         <h2 class="visually-hidden">Фильтр для поиска гостиниц</h2>
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="catalog-filter-group">
@@ -96,7 +95,7 @@
           <button class="button button-accept" type="submit">Применить</button>
           <button class="button button-reset" type="reset">Сбросить</button>
         </form>
-      </section>
+      </header>
 
       <section class="catalog-hotels-result">
         <h2 class="visually-hidden">Результаты поиска</h2>
@@ -129,14 +128,12 @@
             <a class="button hotels-card-about" href="#">Подробнее</a>
             <button class="button hotels-card-favorite" type="button">В избранное</button>
             <p class="hotels-card-grade">
-              <span class="hotels-card-stars">
-                <ul>
-                  <li class="visually-hidden">Звезда</li>
-                  <li class="visually-hidden">Звезда</li>
-                  <li class="visually-hidden">Звезда</li>
-                  <li class="visually-hidden">Звезда</li>
-                </ul>
-              </span>
+              <ul class="hotels-card-stars">
+                <li class="hotels-card-star"></li>
+                <li class="hotels-card-star"></li>
+                <li class="hotels-card-star"></li>
+                <li class="hotels-card-star"></li>
+              </ul>
               <span class="hotels-card-rating">Рейтинг: 8,5</span>
             </p>
           </li>
@@ -150,14 +147,12 @@
             <a class="button hotels-card-about" href="#">Подробнее</a>
             <button class="button hotels-card-favorite added-favorite" type="button">В избранном</button>
             <p class="hotels-card-grade">
-              <span class="hotels-card-stars">
-                <ul>
-                  <li class="visually-hidden">Звезда</li>
-                  <li class="visually-hidden">Звезда</li>
-                  <li class="visually-hidden">Звезда</li>
-                  <li class="visually-hidden">Звезда</li>
-                </ul>
-              </span>
+              <ul class="hotels-card-stars">
+                <li class="hotels-card-star"></li>
+                <li class="hotels-card-star"></li>
+                <li class="hotels-card-star"></li>
+                <li class="hotels-card-star"></li>
+              </ul>
               <span class="hotels-card-rating">Рейтинг: 9,2</span>
             </p>
           </li>
@@ -171,13 +166,11 @@
             <a class="button hotels-card-about" href="#">Подробнее</a>
             <button class="button hotels-card-favorite" type="button">В избранное</button>
             <p class="hotels-card-grade">
-              <span class="hotels-card-stars">
-                <ul>
-                  <li class="visually-hidden">Звезда</li>
-                  <li class="visually-hidden">Звезда</li>
-                  <li class="visually-hidden">Звезда</li>
-                </ul>
-              </span>
+              <ul class="hotels-card-stars">
+                <li class="hotels-card-star"></li>
+                <li class="hotels-card-star"></li>
+                <li class="hotels-card-star"></li>
+              </ul>
               <span class="hotels-card-rating">Рейтинг: 6,9</span>
             </p>
           </li>
@@ -191,12 +184,10 @@
             <a class="button hotels-card-about" href="#">Подробнее</a>
             <button class="button hotels-card-favorite" type="button">В избранное</button>
             <p class="hotels-card-grade">
-              <span class="hotels-card-stars">
-                <ul>
-                  <li class="visually-hidden">Звезда</li>
-                  <li class="visually-hidden">Звезда</li>
-                </ul>
-              </span>
+              <ul class="hotels-card-stars">
+                <li class="hotels-card-star"></li>
+                <li class="hotels-card-star"></li>
+              </ul>
               <span class="hotels-card-rating">Рейтинг: 5,0</span>
             </p>
           </li>
@@ -254,7 +245,9 @@
       <address class="contact">
         <a class="contact-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
       </address>
-      <p class="about-text">Сделано в <a class="htmlacademy-link" href="https://htmlacademy.ru/">.html academy</a></p>
+      <a class="htmlacademy-link" href="https://htmlacademy.ru/">
+        <img src="images/htmlacademy.svg" width="115" height="33" alt="Логотип академии">
+      </a>
     </footer>
   </body>
 </html>
