@@ -15,25 +15,30 @@
 }
 
 html {
-  background-color: #F2F2F2;
   height: 100%;
 }
 
 body {
-  margin: 0 auto;
+  margin: 0;
   display: flex;
   flex-direction: column;
   min-height: 100%;
   font-family: "PT Sans", sans-serif;
   font-size: 22px;
   line-height: 26px;
-  color: #000000;
-  background-color: #FFFFFF;
-  width: 1200px;
+  color: #333333;
+  background-color: #F2F2F2;
+  min-width: 1280px;
 }
 
 .main-container {
   flex-grow: 1;
+}
+
+.page-container {
+  background-color: #FFFFFF;
+  width: 1200px;
+  margin: 0 auto;
 }
 
 .logo-link {
@@ -77,6 +82,7 @@ body {
 .hero {
   text-align: center;
   background-image: url(../images/index-background.jpg);
+  background-color: #82B3D3;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -104,7 +110,12 @@ body {
   width: 1200px;
 }
 
+.advantages-item-img .advantages-title {
+  color: #FFFFFF;
+}
+
 .advantages h2 {
+  color: #000000;
   font-size: 30px;
   line-height: 36px;
   text-align: center;
@@ -116,6 +127,7 @@ body {
 }
 
 .advantages-title {
+  color: #000000;
   font-size: 24px;
   line-height: 28px;
   text-align: center;
@@ -148,6 +160,7 @@ body {
 }
 
 .services h2 {
+  color: #000000;
   font-size: 30px;
   line-height: 36px;
   text-align: center;
@@ -155,6 +168,7 @@ body {
 }
 
 .services-title {
+  color: #000000;
   font-size: 24px;
   line-height: 28px;
   text-align: center;
@@ -171,6 +185,7 @@ body {
 }
 
 .search h2 {
+  color: #000000;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
@@ -188,7 +203,7 @@ body {
 
 .subscribe {
   color: #FFFFFF;
-  background-color: #000080;
+  background-color: #82B3D3;
   text-align: center;
   background-image: url(../images/subscribe-background.jpg);
   background-size: cover;
@@ -242,7 +257,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   color: #FFFFFF;
-  background-color: #000080;
+  background-color: #82B3D3;
   width: 1200px;
 }
 
@@ -309,7 +324,6 @@ body {
   line-height: 20px;
   font-weight: 700;
   text-transform: uppercase;
-  width: 191px;
 }
 
 .reset-button {
@@ -320,11 +334,14 @@ body {
   line-height: 20px;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.filter-buttons {
   width: 191px;
 }
 
-.catalog-filter .button {
-  display: block;
+.filter-buttons .button {
+  width: 191px;
 }
 
 .sorting {
@@ -333,6 +350,7 @@ body {
 }
 
 .search-result {
+  color: #000000;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
