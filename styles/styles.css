@@ -383,7 +383,6 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 142px;
-  flex-direction: center;
 }
 
 .social-link {
