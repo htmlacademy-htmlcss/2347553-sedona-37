@@ -14,7 +14,9 @@
   font-display: swap;
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -128,10 +130,8 @@ body {
   margin-bottom: 69px;
 }
 
-.advantages-title {
-  margin: 0 auto;
-  max-width: 620px;
-  margin-bottom: 25px;
+.advantages {
+  margin-bottom: 64px;
 }
 
 .advantages-lead {
@@ -144,7 +144,6 @@ body {
 .advantages-list {
   list-style-type: none;
   margin: 0;
-  margin-bottom: 64px;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
@@ -169,6 +168,11 @@ body {
   padding: 0;
 }
 
+.advantages-item-img img {
+  height: 100%;
+  object-fit: cover;
+}
+
 .advantages-item-img .advantages-subtitle {
   color: #FFFFFF;
 }
@@ -177,12 +181,15 @@ body {
   padding: 102px 85px;
 }
 
-.advantages h2 {
+.advantages-title {
   color: #000000;
   font-size: 30px;
   line-height: 36px;
   text-align: center;
   text-transform: uppercase;
+  margin: 0 auto;
+  max-width: 620px;
+  margin-bottom: 25px;
 }
 
 .advantages-subtitle {
@@ -205,6 +212,7 @@ body {
 
 .services {
   text-align: center;
+  margin-bottom: 96px;
 }
 
 .services-list {
@@ -213,7 +221,6 @@ body {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 96px;
 }
 
 .services-item {
@@ -243,7 +250,9 @@ body {
 }
 
 .services-lead {
+  text-align: center;
   margin: 0 auto;
+  max-width: 490px;
   margin-bottom: 64px;
 }
 
@@ -296,6 +305,7 @@ body {
   border-radius: 4px;
   padding: 8px 50px;
   margin-bottom: 96px;
+  max-width: 376px;
 }
 
 .subscribe {
@@ -370,28 +380,22 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  width: 141px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 142px;
   flex-direction: center;
 }
 
-.social-item-vk {
-  display: block;
-  width: 47px;
+.social-link {
+  display: flex;
   height: 40px;
+  justify-content: center;
+  align-items: center;
 }
 
-.social-item-telegram {
-  display: block;
-  width: 47px;
-  height: 40px;
-}
-
-.social-item-youtube {
-  display: block;
-  width: 47px;
-  height: 40px;
+.htmlacademy-link {
+  display: flex;
+  align-items: center;
 }
 
 .catalog-header {
@@ -503,6 +507,7 @@ body {
 
 .sorting {
   display: flex;
+  align-items: center;
   margin-bottom: 40px;
 }
 
@@ -685,7 +690,7 @@ body {
 }
 
 .pagination-item {
-  width: 60px;
+  min-width: 60px;
   height: 60px;
   margin-right: 8px;
   text-align: center;
@@ -706,6 +711,10 @@ body {
   background-color: #82B3D3;
   text-decoration: none;
   border-radius: 4px;
+}
+
+.pagination-item-empty {
+  padding: 12px 20px;
 }
 
 .pagination-current {
