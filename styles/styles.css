@@ -97,8 +97,9 @@ body {
   width: 68px;
   height: 2px;
   position: absolute;
-  left: 16px;
-  top: 63px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -1px;
   background-color: #756157;
 }
 
@@ -107,8 +108,9 @@ body {
   width: 93px;
   height: 2px;
   position: absolute;
-  left: 16px;
-  top: 63px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -1px;
   background-color: #756157;
 }
 
@@ -243,7 +245,6 @@ body {
   width: 400px;
   min-height: 385px;
   padding: 112px 85px;
-  position: relative;
 }
 
 .advantages-item-dark {
@@ -269,7 +270,6 @@ body {
 
 .advantages-item-img-column {
   padding: 102px 85px;
-  position: relative;
 }
 
 .advantages-title {
@@ -291,26 +291,24 @@ body {
   text-transform: uppercase;
   margin: 0 auto;
   max-width: 175px;
-  margin-bottom: 62px;
+  margin-bottom: 30px;
 }
 
-.advantages-subtitle::before {
+.advantages-description::before {
   content: "";
-  position: absolute;
+  display: block;
   width: 60px;
   height: 2px;
-  top: 188px;
-  left: 170px;
+  margin: 0 auto 32px;
   background-color: rgba(0, 0, 0, 0.30);
 }
 
-.advantages-item-img-column .advantages-subtitle::before {
+.advantages-item-img-column .advantages-description::before {
   content: "";
-  position: absolute;
+  display: block;
   width: 60px;
   height: 2px;
-  top: 188px;
-  left: 170px;
+  margin: 0 auto 32px;
   background-color: rgba(255, 255, 255, 0.30);
 }
 
@@ -584,12 +582,12 @@ body {
 }
 
 .breadcrumbs-item {
-  margin-right: 28px;
-  position: relative;
+  display: flex;
+  margin-right: 10px;
 }
 
 .breadcrumbs-link-img {
-  display: inline-block;
+  height: 21px;
   background-image: url(../images/home.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -597,10 +595,9 @@ body {
 
 .breadcrumbs-item:not(:first-child)::before {
   content: "";
-  padding: 10px 4px;
-  position: absolute;
-  left: -17px;
-  top: 1px;
+  width: 8px;
+  height: 20px;
+  margin: auto 10px auto 0;
   background-image: url(../images/arrow-breadcrumbs.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -714,7 +711,8 @@ body {
 }
 
 .select-control:disabled {
- border: 2px solid #0000004D;
+ border: 2px solid #000000;
+ opacity: 0.3;
  }
 
 .list-view-buttons {
