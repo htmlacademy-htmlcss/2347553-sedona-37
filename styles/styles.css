@@ -565,10 +565,22 @@ body {
 
 .breadcrumbs-link:hover {
   color: #FFFFFF99;
+  opacity: 0.6;
 }
 
 .breadcrumbs-link:active {
   color: #FFFFFF4D;
+  opacity: 0.3;
+}
+
+.breadcrumbs-link:not([href]):hover {
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+.breadcrumbs-linkL:not([href]):active {
+  color: #FFFFFF;
+  opacity: 1;
 }
 
 .breadcrumbs-item {
@@ -576,18 +588,18 @@ body {
   position: relative;
 }
 
-.breadcrumbs-link[href] {
+.breadcrumbs-link-img {
   display: inline-block;
   background-image: url(../images/home.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.breadcrumbs-link[href]::before {
+.breadcrumbs-item:not(:first-child)::before {
   content: "";
   padding: 10px 4px;
   position: absolute;
-  left: 23px;
+  left: -17px;
   top: 1px;
   background-image: url(../images/arrow-breadcrumbs.svg);
   background-repeat: no-repeat;
