@@ -79,6 +79,14 @@ body {
   z-index: 1;
 }
 
+.logo-link:hover {
+  opacity: 0.6;
+}
+
+.logo-link:active {
+  opacity: 0.3;
+}
+
 .logo {
   display: block;
 }
@@ -474,7 +482,7 @@ body {
   border-radius: 0 4px 4px 0;
 }
 
-.subscribe-button:focus {
+.subscribe-button:focus-visible {
   outline: 2px solid #000000;
 }
 
@@ -486,6 +494,7 @@ body {
 }
 
 .subscribe-form .field {
+  font-family: "PT Sans", sans-serif;
   display: block;
   width: 100%;
   font-size: 18px;
@@ -501,7 +510,7 @@ body {
   background-color: #F2F2F2;
 }
 
-.subscribe-form .field:focus {
+.subscribe-form .field:focus-visible {
   outline: 2px solid #000000;
 }
 
@@ -548,11 +557,11 @@ body {
   align-items: center;
 }
 
-.social-link path:hover {
+.social-link:hover path {
   fill: #68A2CA;
 }
 
-.social-link path:active {
+.social-link:active path {
   fill: #68A2CA4D;
 }
 
@@ -561,11 +570,11 @@ body {
   align-items: center;
 }
 
-.htmlacademy-link path:hover {
+.htmlacademy-link:hover path {
   fill: #756157;
 }
 
-.htmlacademy-link path:active {
+.htmlacademy-link:active path {
   fill: #7561574D;
 }
 
@@ -675,11 +684,17 @@ body {
   line-height: 24px;
   font-weight: 700;
   padding: 0;
+  margin-bottom: 32px;
 }
 
 .catalog-filter-item {
   font-size: 18px;
   line-height: 23px;
+  margin-bottom: 16px;
+}
+
+.catalog-filter-item:last-child {
+  margin-bottom: 0;
 }
 
 .accept-button {
@@ -691,6 +706,7 @@ body {
   border: none;
   padding: 8px;
   cursor: pointer;
+  margin-top: 56px;
 }
 
 .reset-button {
@@ -704,7 +720,7 @@ body {
   cursor: pointer;
 }
 
-.reset-button:focus {
+.reset-button:focus-visible {
   outline: 2px solid #68A2CA;
 }
 
@@ -746,6 +762,7 @@ body {
 }
 
 .select-control {
+  font-family: "PT Sans", sans-serif;;
   font-size: 18px;
   line-height: 21px;
   min-width: 292px;
@@ -833,7 +850,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 340px);
   gap: 20px;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 
 .hotels-card {
@@ -962,6 +979,8 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
+  padding-top: 40px;
+  border-top: 1px solid #E6E6E6;
 }
 
 .pagination-item {
