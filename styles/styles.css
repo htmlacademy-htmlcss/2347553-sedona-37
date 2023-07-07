@@ -20,6 +20,12 @@
   box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 html {
   height: 100%;
 }
@@ -63,6 +69,7 @@ body {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.20);
 }
 
 .logo-link {
@@ -79,6 +86,32 @@ body {
 .navigation {
   display: flex;
   margin: 0 70px;
+}
+
+.navigation-item {
+  position: relative;
+}
+
+.navigation-link-active::before {
+  content: "";
+  width: 68px;
+  height: 2px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -1px;
+  background-color: #756157;
+}
+
+.navigation-link-catalog-active::before {
+  content: "";
+  width: 93px;
+  height: 2px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -1px;
+  background-color: #756157;
 }
 
 .navigation-list {
@@ -106,13 +139,66 @@ body {
   text-decoration: none;
 }
 
+.navigation-link:hover {
+  color: #00000099;
+}
+
+.navigation-link:active {
+  color: #0000004D;
+}
+
 .navigation-user .navigation-link {
   min-width: 44px;
   min-height: 64px;
   justify-content: flex-end;
 }
 
-.navigation-item .button {
+.navigation-link-search {
+  background-image: url(../images/search.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.navigation-link-search:hover {
+  opacity: 0.6;
+}
+
+.navigation-link-search:active {
+  opacity: 0.3;
+}
+
+.navigation-link-favourite {
+  background-image: url(../images/favourite.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+.navigation-link-favourite:hover {
+  opacity: 0.6;
+}
+
+.navigation-link-favourite:active {
+  opacity: 0.3;
+}
+
+.favourites {
+  display: inline-block;
+  font-size: 10px;
+  line-height: 10px;
+  font-weight: 400;
+  color: #FFFFFF;
+  background-color: #7DB54F;
+  min-width: 20px;
+  min-height: 20px;
+  border-radius: 50%;
+  padding: 5px 5px 5px 4px;
+  position: absolute;
+  top: 11px;
+  right: 4px;
+}
+
+.navigation-link.button {
   display: block;
   color: #FFFFFF;
   background-color: #756157;
@@ -124,12 +210,36 @@ body {
   margin: 14px 0 14px 20px;
 }
 
+.button:disabled {
+  background-color: #E5E5E5;
+  color: #FFFFFF;
+}
+
+.brown-button:hover {
+  background-color: #615048;
+}
+
+.brown-button:active {
+  color: #FFFFFF4D;
+  background-color: #756157;
+}
+
+.blue-button:hover {
+  background-color: #68A2CA;
+}
+
+.blue-button:active {
+  color: #FFFFFF4D;
+  background-color: #82B3D3;
+}
+
 .hero {
   text-align: center;
-  background-image: url(../images/index-background.jpg);
+  background-image: url(../images/decorator.svg), url(../images/index-background.jpg);
   background-color: #82B3D3;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-size: auto, cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom, center;
   padding-top: 51px;
   padding-bottom: 82px;
   margin-bottom: 69px;
@@ -205,7 +315,24 @@ body {
   text-transform: uppercase;
   margin: 0 auto;
   max-width: 175px;
-  margin-bottom: 62px;
+}
+
+.advantages-description::before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  margin: 30px auto;
+  background-color: rgba(0, 0, 0, 0.30);
+}
+
+.advantages-item-img-column .advantages-description::before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  margin: 30px auto;
+  background-color: rgba(255, 255, 255, 0.30);
 }
 
 .advantages-description {
@@ -307,6 +434,7 @@ body {
   border: none;
   padding: 8px 50px;
   max-width: 376px;
+  cursor: pointer;
 }
 
 .subscribe {
@@ -340,21 +468,41 @@ body {
   font-family: "PT Sans", sans-serif;
   font-size: 20px;
   line-height: 36px;
-  width: 232px;
   border: none;
-  padding: 0;
+  padding: 8px 50px;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+}
+
+.subscribe-button:focus {
+  outline: 2px solid #000000;
 }
 
 .subscribe-form {
   width: 684px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
 }
 
 .subscribe-form .field {
+  display: block;
+  width: 100%;
   font-size: 18px;
   line-height: 24px;
+  height: 100%;
   margin: 0;
-  padding: 0;
+  padding: 12px 20px;
   border: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.catalog-page .subscribe-form .field {
+  background-color: #F2F2F2;
+}
+
+.subscribe-form .field:focus {
+  outline: 2px solid #000000;
 }
 
 .page-footer {
@@ -376,6 +524,14 @@ body {
   text-decoration: none;
 }
 
+.contact-phone:hover {
+  color: #756157;
+}
+
+.contact-phone:active {
+  color: #7561574D;
+}
+
 .social-list {
   list-style-type: none;
   margin: 0;
@@ -392,9 +548,25 @@ body {
   align-items: center;
 }
 
+.social-link path:hover {
+  fill: #68A2CA;
+}
+
+.social-link path:active {
+  fill: #68A2CA4D;
+}
+
 .htmlacademy-link {
   display: flex;
   align-items: center;
+}
+
+.htmlacademy-link path:hover {
+  fill: #756157;
+}
+
+.htmlacademy-link path:active {
+  fill: #7561574D;
 }
 
 .catalog-header {
@@ -422,6 +594,7 @@ body {
   margin: 0;
   padding: 0;
   min-width: 114px;
+  margin-bottom: 40px;
 }
 
 .breadcrumbs-link {
@@ -432,8 +605,46 @@ body {
   min-height: 12px;
 }
 
-.breadcrumbs-item:not(:last-child) {
+.breadcrumbs-link:hover {
+  color: #FFFFFF99;
+  opacity: 0.6;
+}
+
+.breadcrumbs-link:active {
+  color: #FFFFFF4D;
+  opacity: 0.3;
+}
+
+.breadcrumbs-link:not([href]):hover {
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+.breadcrumbs-linkL:not([href]):active {
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+.breadcrumbs-item {
+  display: flex;
   margin-right: 10px;
+}
+
+.breadcrumbs-link-img {
+  height: 21px;
+  background-image: url(../images/home.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.breadcrumbs-item:not(:first-child)::before {
+  content: "";
+  width: 8px;
+  height: 20px;
+  margin: auto 10px auto 0;
+  background-image: url(../images/arrow-breadcrumbs.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .catalog-filter {
@@ -479,6 +690,7 @@ body {
   line-height: 20px;
   border: none;
   padding: 8px;
+  cursor: pointer;
 }
 
 .reset-button {
@@ -489,6 +701,19 @@ body {
   line-height: 20px;
   border: none;
   padding: 8px;
+  cursor: pointer;
+}
+
+.reset-button:focus {
+  outline: 2px solid #68A2CA;
+}
+
+.reset-button:hover {
+  opacity: 0.6;
+}
+
+.reset-button:active {
+  opacity: 0.3;
 }
 
 .filter-buttons {
@@ -523,11 +748,26 @@ body {
 .select-control {
   font-size: 18px;
   line-height: 21px;
-  width: 292px;
+  min-width: 292px;
   margin-right: 70px;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
+  padding: 12px 18px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url(../images/arrow.svg);
+  background-repeat: no-repeat;
+  background-position: 260px 19px;
 }
+
+.select-control:hover {
+ border: 2px solid #68A2CA;
+}
+
+.select-control:disabled {
+ border: 2px solid #000000;
+ opacity: 0.3;
+ }
 
 .list-view-buttons {
   display: flex;
@@ -573,7 +813,15 @@ body {
   background-repeat: no-repeat;
 }
 
-.active {
+.list-view-button.active {
+  border: 2px solid #000000;
+}
+
+.list-view-button:hover {
+  border: 2px solid #000000;
+}
+
+.list-view-button:active {
   border: 2px solid #000000;
 }
 
@@ -616,6 +864,18 @@ body {
   grid-column: 1 / -1;
 }
 
+.card-title-link:focus-visible {
+  outline: 2px solid #000000;
+}
+
+.card-title-link:hover {
+  color: #00000099;
+}
+
+.card-title-link:active {
+  color: #0000004D;
+}
+
 .hotels-card-description {
   font-size: 18px;
   line-height: 21px;
@@ -643,9 +903,19 @@ body {
   line-height: 20px;
   padding: 8px;
   border: none;
+  cursor: pointer;
 }
 
 .added-favorite {
+  background-color: #7DB54F;
+}
+
+.added-favorite:hover {
+  background-color: #6C9E42;
+}
+
+.added-favorite:active {
+  color: #FFFFFF4D;
   background-color: #7DB54F;
 }
 
@@ -716,6 +986,15 @@ body {
   background-color: #82B3D3;
   text-decoration: none;
   border-radius: 4px;
+}
+
+.pagination-link:not(.pagination-current):hover {
+  background-color:#68A2CA;
+}
+
+.pagination-link:not(.pagination-current):active {
+  background-color: #82B3D3;
+  color: #FFFFFF4D;
 }
 
 .pagination-item-empty {
