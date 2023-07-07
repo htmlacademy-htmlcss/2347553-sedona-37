@@ -139,6 +139,14 @@ body {
   text-decoration: none;
 }
 
+.navigation-link:hover {
+  color: #00000099;
+}
+
+.navigation-link:active {
+  color: #0000004D;
+}
+
 .navigation-user .navigation-link {
   min-width: 44px;
   min-height: 64px;
@@ -151,11 +159,27 @@ body {
   background-position: center;
 }
 
+.navigation-link-search:hover {
+  opacity: 0.6;
+}
+
+.navigation-link-search:active {
+  opacity: 0.3;
+}
+
 .navigation-link-favourite {
   background-image: url(../images/favourite.svg);
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
+}
+
+.navigation-link-favourite:hover {
+  opacity: 0.6;
+}
+
+.navigation-link-favourite:active {
+  opacity: 0.3;
 }
 
 .favourites {
@@ -291,7 +315,6 @@ body {
   text-transform: uppercase;
   margin: 0 auto;
   max-width: 175px;
-  margin-bottom: 30px;
 }
 
 .advantages-description::before {
@@ -299,7 +322,7 @@ body {
   display: block;
   width: 60px;
   height: 2px;
-  margin: 0 auto 32px;
+  margin: 30px auto;
   background-color: rgba(0, 0, 0, 0.30);
 }
 
@@ -308,7 +331,7 @@ body {
   display: block;
   width: 60px;
   height: 2px;
-  margin: 0 auto 32px;
+  margin: 30px auto;
   background-color: rgba(255, 255, 255, 0.30);
 }
 
@@ -411,6 +434,7 @@ body {
   border: none;
   padding: 8px 50px;
   max-width: 376px;
+  cursor: pointer;
 }
 
 .subscribe {
@@ -444,21 +468,41 @@ body {
   font-family: "PT Sans", sans-serif;
   font-size: 20px;
   line-height: 36px;
-  width: 232px;
   border: none;
-  padding: 0;
+  padding: 8px 50px;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+}
+
+.subscribe-button:focus {
+  outline: 2px solid #000000;
 }
 
 .subscribe-form {
   width: 684px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
 }
 
 .subscribe-form .field {
+  display: block;
+  width: 100%;
   font-size: 18px;
   line-height: 24px;
+  height: 100%;
   margin: 0;
-  padding: 0;
+  padding: 12px 20px;
   border: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.catalog-page .subscribe-form .field {
+  background-color: #F2F2F2;
+}
+
+.subscribe-form .field:focus {
+  outline: 2px solid #000000;
 }
 
 .page-footer {
@@ -646,6 +690,7 @@ body {
   line-height: 20px;
   border: none;
   padding: 8px;
+  cursor: pointer;
 }
 
 .reset-button {
@@ -656,10 +701,19 @@ body {
   line-height: 20px;
   border: none;
   padding: 8px;
+  cursor: pointer;
+}
+
+.reset-button:focus {
+  outline: 2px solid #68A2CA;
 }
 
 .reset-button:hover {
   opacity: 0.6;
+}
+
+.reset-button:active {
+  opacity: 0.3;
 }
 
 .filter-buttons {
@@ -810,6 +864,18 @@ body {
   grid-column: 1 / -1;
 }
 
+.card-title-link:focus-visible {
+  outline: 2px solid #000000;
+}
+
+.card-title-link:hover {
+  color: #00000099;
+}
+
+.card-title-link:active {
+  color: #0000004D;
+}
+
 .hotels-card-description {
   font-size: 18px;
   line-height: 21px;
@@ -837,6 +903,7 @@ body {
   line-height: 20px;
   padding: 8px;
   border: none;
+  cursor: pointer;
 }
 
 .added-favorite {
