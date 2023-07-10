@@ -492,7 +492,7 @@ body {
   justify-content: center;
 }
 
-.subscribe-form .field {
+.field-subscribe {
   font-family: "PT Sans", sans-serif;
   display: block;
   width: 100%;
@@ -504,7 +504,7 @@ body {
   border-radius: 4px 0 0 4px;
 }
 
-.subscribe-form .field:focus-visible {
+.field-subscribe:focus-visible {
   outline: 2px solid #000000;
 }
 
@@ -647,7 +647,7 @@ body {
 
 .field-date {
   width: 440px;
-  padding: 12px 20px;
+  padding: 12px 45px 12px 20px;
   background-image: url(../images/calendar.svg);
   background-repeat: no-repeat;
   background-position: center right 20px;
@@ -657,6 +657,7 @@ body {
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
+  max-width: 135px;
   color: #000000;
   text-transform: capitalize;
 }
@@ -696,6 +697,7 @@ body {
 .field-group-adult .search-options,
 .field-group-child .search-options {
   margin-right: 46px;
+  max-width: 95px;
 }
 
 .field-group-adult,
@@ -1011,9 +1013,10 @@ body {
 
 .price-input {
   width: 143px;
-  font: inherit;
-  font-weight: 700;
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
   line-height: 24px;
+  font-weight: 700;
   padding: 12px 20px;
   padding-right: 40px;
   box-sizing: border-box;
@@ -1434,6 +1437,6 @@ body {
   color: #000000;
 }
 
-.catalog-page .subscribe-form .field {
+.catalog-page .field-subscribe {
   background-color: #F2F2F2;
 }
