@@ -31,7 +31,6 @@
             </li>
             <li class="navigation-item">
               <a class="navigation-link navigation-link-favourite" href="#">
-                <span class="visually-hidden">Избранное</span>
                 <span class="visually-hidden">Количество избранных:</span>
                 <span class="favourites">12</span>
               </a>
@@ -89,17 +88,17 @@
             <li class="services-item">
               <img src="images/house.svg" width="75" height="72" alt="Дом.">
               <h3 class="services-subtitle">Жильё</h3>
-              <p class="services-description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+              <p class="services-description">Рекомендуем пожить в настоящем мотеле, <br>всё как в кино!</p>
             </li>
             <li class="services-item">
               <img src="images/burger.svg" width="75" height="72" alt="Бургер.">
               <h3 class="services-subtitle">Еда</h3>
-              <p class="services-description">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+              <p class="services-description">Всегда заказывайте <br>топовый фирменный бургер, вы не разочаруетесь!</p>
             </li>
             <li class="services-item">
               <img src="images/gift.svg" width="75" height="72" alt="Коробка с бантом.">
               <h3 class="services-subtitle">Сувениры</h3>
-              <p class="services-description">Не только китайского, но и настоящего местного производства!</p>
+              <p class="services-description">Не только китайского, <br>но и настоящего местного производства!</p>
             </li>
           </ul>
         </section>
@@ -114,7 +113,7 @@
           <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
           <p class="subscribe-subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-            <input class="field" placeholder="Ваш e-mail" type="email" name="user-email" required>
+            <input class="field-subscribe" placeholder="Ваш e-mail" type="email" name="user-email" required>
             <button class="button subscribe-button blue-button" type="submit">Подписаться</button>
           </form>
         </section>
@@ -157,6 +156,65 @@
           <span class="visually-hidden">Логотип Академии</span>
         </a>
       </footer>
+    </div>
+    <div class="modal-container modal-container-close">
+      <div class="modal-search">
+        <button class="modal-close-button" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
+            <p class="field-group">
+              <label class="search-options" for="date-start">Дата заезда:</label>
+              <input class="field field-date" type="text" id="date-start" name="date-start" value="27 апреля 2020">
+              <span class="modal-error">Мы не можем отправить вас в прошлое.</span>
+            </p>
+            <p class="field-group">
+              <label class="search-options" for="date-end">Дата выезда:</label>
+              <input class="field field-date" type="text" id="date-end" name="date-end" value="1 сентября 2023">
+              <span class="modal-available">На эти даты есть свободные номера. Пока есть.</span>
+            </p>
+            <div class="modal-field-group">
+              <p class="field-group field-group-adult">
+                <label class="search-options" for="adult-quantity">Взрослые:</label>
+                <button class="less quantity-button" type="button">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 9V11H17V9H3Z" fill="#756157" fill-opacity="0.3"/>
+                  </svg>
+                </button>
+                <input class="field field-people" type="number" id="adult-quantity" name="adult-quantity" value="2">
+                <button class="more quantity-button" type="button">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" fill="#756157" fill-opacity="0.3"/>
+                  </svg>
+                </button>
+              </p>
+              <p class="field-group field-group-child">
+                <label class="search-options" for="child-quantity">Дети:</label>
+                <span class="tooltip">
+                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
+                    <svg class="tooltip-icon" xmlns="http://www.w3.org/2000/svg" width="3" height="12" fill="none"><path fill="#fff" fill-rule="evenodd" d="M.4 0h2v2h-2V0Zm2 12h-2V3h2v9Z" clip-rule="evenodd"/></svg>
+                  </button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                </span>
+                <button class="less quantity-button" type="button">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 9V11H17V9H3Z" fill="#756157" fill-opacity="0.3"/>
+                  </svg>
+                </button>
+                <input class="field field-people" type="number" id="child-quantity" name="child-quantity" value="2">
+                <button class="more quantity-button" type="button">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" fill="#756157" fill-opacity="0.3"/>
+                  </svg>
+                </button>
+              </p>
+            </div>
+            <button class="modal-button blue-button" type="submit">Найти</button>
+          </form>
+        </section>
+      </div>
     </div>
   </body>
 </html>
