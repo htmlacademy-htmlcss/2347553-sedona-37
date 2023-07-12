@@ -476,6 +476,7 @@ body {
   font-family: "PT Sans", sans-serif;
   font-size: 20px;
   line-height: 36px;
+  width: 232px;
   border: none;
   padding: 8px 50px;
   cursor: pointer;
@@ -711,8 +712,9 @@ body {
 }
 
 .field-people {
-  padding: 14px 10px;
-  width: 30px;
+  padding: 14px 3px;
+  text-align: center;
+  width: 31px;
   border-radius: 0;
   line-height: 20px;
 }
@@ -1137,7 +1139,6 @@ body {
   border: none;
   padding: 8px;
   cursor: pointer;
-  margin-top: 56px;
 }
 
 .reset-button {
@@ -1170,6 +1171,7 @@ body {
   gap: 32px;
   justify-content: center;
   align-items: center;
+  padding-top: 56px;
 }
 
 .catalog-hotels-result {
@@ -1415,7 +1417,7 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  padding-top: 40px;
+  padding-top: 39px;
   border-top: 1px solid #E6E6E6;
 }
 
@@ -1433,7 +1435,7 @@ body {
 
 .pagination-link {
   display: block;
-  padding: 12px 20px;
+  padding: 12px 18px;
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
@@ -1453,7 +1455,7 @@ body {
 }
 
 .pagination-item-empty {
-  padding: 12px 20px;
+  padding: 16px 20px 8px;
 }
 
 .pagination-current {
