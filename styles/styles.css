@@ -1211,12 +1211,13 @@ body {
 
 .select-control:not(:disabled):hover,
 .select-control:not(:disabled):focus-visible {
- border: 2px solid #68A2CA;
+  outline: none;
+  border: 2px solid #68A2CA;
 }
 
 .select-control:disabled {
- border: 2px solid #000000;
- opacity: 0.3;
+  border: 2px solid #000000;
+  opacity: 0.3;
  }
 
 .list-view-buttons {
@@ -1270,6 +1271,11 @@ body {
 .list-view-button:hover,
 .list-view-button:active  {
   border: 2px solid #000000;
+}
+
+.list-view-button:focus  {
+  outline: none;
+  border: 2px solid #68A2CA;
 }
 
 .hotels-card-list {
