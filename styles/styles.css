@@ -38,6 +38,7 @@ body {
   line-height: 26px;
   color: #333333;
   background-color: #F2F2F2;
+  min-width: 1200px;
 }
 
 .visually-hidden {
@@ -166,11 +167,13 @@ body {
   background-position: center;
 }
 
-.navigation-link-search:hover {
+.navigation-link-search:hover,
+.navigation-link-favourite:hover {
   opacity: 0.6;
 }
 
-.navigation-link-search:active {
+.navigation-link-search:active,
+.navigation-link-favourite:active {
   opacity: 0.3;
 }
 
@@ -179,14 +182,6 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
-}
-
-.navigation-link-favourite:hover {
-  opacity: 0.6;
-}
-
-.navigation-link-favourite:active {
-  opacity: 0.3;
 }
 
 .favourites {
@@ -222,22 +217,27 @@ body {
   color: #FFFFFF;
 }
 
-.brown-button:hover {
+.brown-button:not(:disabled):hover {
   background-color: #615048;
 }
 
-.brown-button:active {
+.brown-button:not(:disabled):active {
   color: #FFFFFF4D;
   background-color: #756157;
 }
 
-.blue-button:hover {
+.blue-button:not(:disabled):hover {
   background-color: #68A2CA;
 }
 
-.blue-button:active {
+.blue-button:not(:disabled):active {
   color: #FFFFFF4D;
   background-color: #82B3D3;
+}
+
+.welcome {
+  display: block;
+  margin: 0 auto;
 }
 
 .hero {
@@ -595,7 +595,7 @@ body {
 
 .modal-close-button {
   position: absolute;
-  padding: 0;
+  padding: 19px;
   top: 64px;
   right: 52px;
   width: 52px;
@@ -603,10 +603,20 @@ body {
   background-color: #F2F2F2;
   border: none;
   border-radius: 50%;
-  background-image: url("../images/close.svg");
-  background-repeat: no-repeat;
-  background-position: center;
   cursor: pointer;
+}
+
+.modal-close-button:hover {
+  background-color: #E6E6E6;
+}
+
+.modal-close-button:active path {
+  fill: #0000004D;
+}
+
+.modal-close-button:focus-visible {
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
 }
 
 .modal-title {
@@ -651,6 +661,19 @@ body {
   background-image: url(../images/calendar.svg);
   background-repeat: no-repeat;
   background-position: center right 20px;
+}
+
+.field-date::placeholder {
+  opacity: 0.6;
+}
+
+.field-date:hover {
+  background-color: #E6E6E6;
+}
+
+.field-date:focus-visible {
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
 }
 
 .search-options {
@@ -1008,7 +1031,7 @@ body {
 .price-inputs {
   display: flex;
   gap: 2px;
-  margin-bottom: 46px;
+  margin-bottom: 44px;
 }
 
 .price-input {
@@ -1022,14 +1045,14 @@ body {
   box-sizing: border-box;
   color: #000000;
   border: none;
-  background-color: #f2f2f2;
+  background-color: #F2F2F2;
 }
 
 .price-input:hover {
   background-color: #E6E6E6;
 }
 
-.price-input:hover {
+.price-input:focus {
   background-color: #E6E6E6;
   outline: 3px solid #83B3D3;
 }
@@ -1096,7 +1119,7 @@ body {
 
 .toggle-max {
   top: -8px;
-  right: -10px;
+  right: 0;
 }
 
 .price-input::-webkit-outer-spin-button,
@@ -1182,11 +1205,12 @@ body {
   -moz-appearance: none;
   background-image: url(../images/arrow.svg);
   background-repeat: no-repeat;
-  background-position: 260px 19px;
+  background-position: 257px 18px;
+  cursor: pointer;
 }
 
-.select-control:hover,
-.select-control:focus-visible {
+.select-control:not(:disabled):hover,
+.select-control:not(:disabled):focus-visible {
  border: 2px solid #68A2CA;
 }
 
@@ -1261,13 +1285,13 @@ body {
 
 .hotels-card {
   width: 340px;
-  padding: 19px;
+  padding: 20px;
   display: grid;
   grid-template-columns: repeat(2, 140px);
   grid-template-rows: 212px 1fr;
   gap: 16px 20px;
   border-radius: 4px;
-  border: 1px solid #E6E6E6;
+  outline: 1px solid #E6E6E6;
   align-items: center;
 }
 
@@ -1292,11 +1316,11 @@ body {
 }
 
 .card-title-link:hover {
-  color: #00000099;
+  opacity: 0.6;
 }
 
 .card-title-link:active {
-  color: #0000004D;
+  opacity: 0.3;
 }
 
 .hotels-card-description {
