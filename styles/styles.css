@@ -254,11 +254,10 @@ body {
   background-position: bottom, center;
   padding-top: 51px;
   padding-bottom: 82px;
-  margin-bottom: 69px;
 }
 
 .advantages {
-  margin-bottom: 64px;
+  padding-top: 69px;
 }
 
 .advantages-lead {
@@ -357,6 +356,7 @@ body {
 
 .services {
   text-align: center;
+  padding-top: 64px;
 }
 
 .services-list {
@@ -369,7 +369,7 @@ body {
 
 .services-item {
   width: 400px;
-  padding: 81px 85px;
+  padding: 81px 80px;
 }
 
 .services-item:nth-child(odd) {
@@ -465,7 +465,7 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
-  max-width: 404px;
+  max-width: 430px;
   margin: 0 auto;
   margin-bottom: 20px;
 }
@@ -517,10 +517,8 @@ body {
 
 .page-footer {
   display: flex;
-  margin: 0 70px;
   justify-content: space-between;
-  padding-top: 45px;
-  padding-bottom: 35px;
+  padding: 45px 70px 35px;
   align-items: center;
 }
 
