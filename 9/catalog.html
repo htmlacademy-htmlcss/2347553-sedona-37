@@ -10,7 +10,7 @@
 </head>
   <body>
     <div class="page-container">
-      <header class="page-header">
+      <header class="page-header" data-test="header">
         <nav class="navigation">
           <a class="logo-link" href="index.html">
             <img class="logo" src="images/logo.svg" width="140" height="70" alt="Логотип города Седона.">
@@ -45,7 +45,7 @@
         </nav>
       </header>
 
-      <main class="catalog-page main-container">
+      <main class="catalog-page main-container" data-test="main">
         <header class="catalog-header">
           <h1 class="catalog-header-title">Гостиницы Седоны</h1>
           <ul class="breadcrumbs">
@@ -59,7 +59,7 @@
             </li>
           </ul>
           <h2 class="visually-hidden">Фильтр для поиска гостиниц</h2>
-          <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+          <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get" data-test="filter">
             <fieldset class="catalog-filter-group">
               <legend class="catalog-filter-title">Инфраструктура:</legend>
               <ul class="catalog-filter-list">
@@ -144,7 +144,7 @@
           </form>
         </header>
 
-        <section class="catalog-hotels-result">
+        <section class="catalog-hotels-result" data-test="catalog">
           <div class="sorting">
             <h2 class="visually-hidden">Результаты поиска</h2>
             <p class="search-result">Найдено гостиниц: 38</p>
@@ -260,7 +260,7 @@
           </ul>
         </section>
 
-        <section class="subscribe">
+        <section class="subscribe" data-test="subscribe">
           <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
           <p class="subscribe-subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -270,7 +270,7 @@
         </section>
       </main>
 
-      <footer class="page-footer">
+      <footer class="page-footer" data-test="footer">
         <ul class="social-list">
           <li class="social-item">
             <a class="social-link" href="https://vk.com/htmlacademy">
