@@ -193,6 +193,7 @@ body {
   background-color: #7DB54F;
   min-width: 20px;
   min-height: 20px;
+  max-width: 44px;
   border-radius: 10px;
   padding: 5px 5px 5px 4px;
   position: absolute;
@@ -301,6 +302,7 @@ body {
 
 .advantages-item-img-column {
   padding: 102px 85px;
+  min-width: 400px;
 }
 
 .advantages-title {
@@ -526,6 +528,7 @@ body {
   font-weight: 400;
   color: #000000;
   text-decoration: none;
+  max-width: 350px;
 }
 
 .contact-phone:hover {
@@ -1086,6 +1089,7 @@ body {
   right: 20px;
   top: 50%;
   transform: translateY(-50%);
+  max-width: 17px;
 }
 
 .range-scale {
