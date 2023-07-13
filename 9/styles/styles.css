@@ -201,8 +201,8 @@ body {
   border-radius: 10px;
   padding: 5px 5px 5px 4px;
   position: absolute;
-  top: 11px;
-  right: 4px;
+  top: 10px;
+  right: 5px;
 }
 
 .navigation-link.button {
@@ -264,7 +264,7 @@ body {
 .advantages-lead {
   text-align: center;
   margin: 0 auto;
-  max-width: 652px;
+  max-width: 660px;
   margin-bottom: 90px;
 }
 
@@ -1424,7 +1424,7 @@ body {
   line-height: 20px;
   text-align: center;
   border-radius: 4px;
-  padding: 9px 22px 8px 23px;
+  padding: 8px 21px;
 }
 
 .pagination {
