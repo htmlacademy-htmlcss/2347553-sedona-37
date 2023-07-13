@@ -766,7 +766,7 @@ body {
   fill-opacity: 1;
 }
 
-.quantity-button:focus svg {
+.quantity-button:focus-visible svg {
   outline: 3px solid #82b3d3;
   border-radius: 4px;
 }
@@ -826,7 +826,7 @@ body {
 }
 
 .tooltip-toggle:hover + .tooltip-text,
-.tooltip-toggle:focus + .tooltip-text {
+.tooltip-toggle:focus-visible + .tooltip-text {
   display: block;
 }
 
@@ -1061,7 +1061,7 @@ body {
   background-color: #e6e6e6;
 }
 
-.price-input:focus {
+.price-input:focus-visible {
   background-color: #e6e6e6;
   outline: 3px solid #83b3d3;
 }
@@ -1287,7 +1287,7 @@ body {
   border: 2px solid #000000;
 }
 
-.list-view-button:focus {
+.list-view-button:focus-visible {
   outline: none;
   border: 2px solid #68a2ca;
 }
