@@ -72,11 +72,14 @@ body {
   box-shadow: 0 0 15px 0 #00000033;
 }
 
+.page-header {
+  z-index: 1;
+}
+
 .logo-link {
   display: block;
   margin-right: 28px;
   margin-bottom: -6px;
-  z-index: 1;
 }
 
 .logo-link:hover {
